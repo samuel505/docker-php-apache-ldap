@@ -70,13 +70,13 @@ RUN { \
 		echo 'date.timezone=Pacific/Noumea'; \
 	} > /usr/local/etc/php/conf.d/timezone.ini
 
-RUN echo "fr_FR.UTF-8 UTF-8" > /etc/locale.gen && \
+RUN echo "es_ES.UTF-8 UTF-8" > /etc/locale.gen && \
 locale-gen && \
-update-locale LANG=fr_FR.UTF-8 LANGUAGE=fr_FR LC_ALL=fr_FR.UTF-8 && \
-export LANG=fr_FR.UTF-8 LANGUAGE=fr_FR LC_ALL=fr_FR.UTF-8
+update-locale LANG=es_ES.UTF-8 LANGUAGE=es_ES LC_ALL=es_ES.UTF-8 && \
+export LANG=es_ES.UTF-8 LANGUAGE=es_ES LC_ALL=es_ES.UTF-8
 
-ENV LANG=fr_FR.UTF-8 \
-    LANGUAGE=fr_FR \
-    LC_ALL=fr_FR.UTF-8
+ENV LANG=es_ES.UTF-8 \
+    LANGUAGE=es_ES \
+    LC_ALL=es_ES.UTF-8
 
 VOLUME /var/www/html
